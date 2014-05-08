@@ -42,7 +42,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.cpurend.vsync=false \
     persist.hwc.mdpcomp.enable=1 \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.qualcomm.cabl=2
 
 # FRP
 #PRODUCT_PROPERTY_OVERRIDES += \
