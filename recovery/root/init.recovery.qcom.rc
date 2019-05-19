@@ -1,5 +1,9 @@
 import init.target.recovery.rc
 
+on fs
+    wait /dev/block/platform/soc.0/7824900.sdhci
+    symlink /dev/block/platform/soc.0/7824900.sdhci /dev/block/bootdevice
+
 # separate copy needed to use /sbin/linker instead of /system/bin/linker
 service sbinqseecomd /sbin/qseecomd
     oneshot
