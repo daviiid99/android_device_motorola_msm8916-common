@@ -154,7 +154,7 @@ BOARD_ROOT_EXTRA_FOLDERS := firmware persist fsg
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
