@@ -1,3 +1,2 @@
-get_prop(appdomain, camera_prop)
 get_prop(appdomain, theme_prop)
 
