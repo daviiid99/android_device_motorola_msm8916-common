@@ -138,6 +138,9 @@ TARGET_KERNEL_HAVE_EXFAT := true
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
+# Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.full
