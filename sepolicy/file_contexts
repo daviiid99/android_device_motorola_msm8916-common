@@ -51,3 +51,6 @@
 
 # Camera
 /sys/devices(/platform)?/soc\.0/qcom,msm-cam\.[0-9]+/video4linux/video[0-9]+/name(/.*)?  u:object_r:sysfs_graphics:s0
+/sys/devices(/platform)?/soc\.0/qcom,msm-cam\.[0-9]+/video4linux/v4l-subdev[0-9]+/name(/.*)?  u:object_r:sysfs_graphics:s0
+/sys/devices/virtual/video4linux/video[0-9]+/name(/.*)?  u:object_r:sysfs_graphics:s0
+
