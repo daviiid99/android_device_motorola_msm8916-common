@@ -155,8 +155,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist fsg
 
 # SELinux
-TARGET_EXCLUDE_QCOM_SEPOLICY := true
-include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
