@@ -1,5 +1,7 @@
 #!/sbin/sh
 
+setenforce 0
+
 export SYSDEV="$(readlink -nf "$1")"
 
 determine_system_mount() {
@@ -35,3 +37,5 @@ for file in /firmware/image/*.gz; do
   chcon u:object_r:firmware_file:s0 $S/etc/firmware/$OUT_FILE
 done
 unmount_system
+
+setenforce 1
