@@ -13,45 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[vendor/bin/imsdatadaemon]
-user: AID_RADIO
-group: AID_RADIO
-mode: 0755
-caps: NET_BIND_SERVICE
-
-[vendor/bin/ims_rtp_daemon]
-user: AID_RADIO
-group: AID_RADIO
-mode: 0755
-caps: NET_BIND_SERVICE
-
-[vendor/bin/pm-service]
-user: AID_SYSTEM
-group: AID_SYSTEM
-mode: 0755
-caps: NET_BIND_SERVICE
-
-[vendor/bin/loc_launcher]
-mode: 0755
-user:  AID_GPS
-group: AID_GPS
-caps: SETUID SETGID
-
-[firmware/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
-[persist/]
-mode: 0771
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: 0
-
 [fsg/]
 mode: 0755
 user: AID_ROOT
 group: AID_ROOT
 caps: 0
-
