@@ -231,10 +231,6 @@ PRODUCT_PACKAGES += \
     libOmxVidcCommon \
     libstagefrighthw
 
-# Qualcomm
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:/system/etc/permissions/privapp-permissions-qti.xml
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
