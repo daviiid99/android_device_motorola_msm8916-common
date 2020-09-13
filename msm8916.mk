@@ -275,7 +275,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     stml0xx_wrapper.sh \
-    ueventd.rc
+    ueventd.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \
