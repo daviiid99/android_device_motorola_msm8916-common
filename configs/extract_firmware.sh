@@ -2,7 +2,8 @@
 
 setenforce 0
 
-export SYSDEV="$(readlink -nf "$1")"
+export SYSDEV="$(readlink -nf "/dev/block/bootdevice/by-name/system")"
+export FWDEV="$(readlink -nf "/dev/block/bootdevice/by-name/modem")"
 
 determine_system_mount() {
   if grep -q -e"^$SYSDEV" /proc/mounts; then
@@ -28,6 +29,15 @@ unmount_system() {
   umount $SYSMOUNT
 }
 
+mount_firmware() {
+  mount $FWDEV /firmware
+}
+
+unmount_firmware() {
+  umount /firmware
+}
+
+mount_firmware
 determine_system_mount
 mount_system
 for file in /firmware/image/*.gz; do
@@ -37,5 +47,6 @@ for file in /firmware/image/*.gz; do
   chcon u:object_r:firmware_file:s0 $S/etc/firmware/$OUT_FILE
 done
 unmount_system
+unmount_firmware
 
 setenforce 1
