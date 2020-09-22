@@ -197,6 +197,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
+# HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common_system \
