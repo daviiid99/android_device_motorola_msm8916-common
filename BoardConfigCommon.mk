@@ -156,6 +156,7 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib/libril-qc-qmi-1.so|libcutils_shim.so \
     /system/vendor/lib/libmdmcutback.so|libqsap_shim.so \
     /system/lib/libmot_sensorlistener.so|libsensor.so \
     /system/lib/libjustshoot.so|libshims_camera.so \
