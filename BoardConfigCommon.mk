@@ -113,6 +113,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_USES_ION := true
+TARGET_DISABLE_POSTRENDER_CLEANUP := true
 
 # Exclude serif fonts for saving system.img size.
 EXCLUDE_SERIF_FONTS := true
