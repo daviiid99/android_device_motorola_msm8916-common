@@ -172,7 +172,6 @@ TARGET_LD_PRELOAD := \
     /system/lib/libboringssl-compat.so
 
 # Telephony
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RIL_VARIANT := caf
 
 # Peripheral manager
