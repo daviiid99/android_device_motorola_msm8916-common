@@ -170,9 +170,6 @@ TARGET_LD_SHIM_LIBS := \
 TARGET_LD_PRELOAD := \
     /system/lib/libboringssl-compat.so
 
-# Telephony
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
