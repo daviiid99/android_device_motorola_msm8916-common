@@ -221,8 +221,7 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service \
-    keystore.msm8916
+    android.hardware.keymaster@3.0-service
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
