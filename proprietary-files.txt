@@ -30,7 +30,7 @@ vendor/lib/libbson.so
 vendor/lib/libfastcvopt.so
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_4_0.fw
+vendor/firmware/cpp_firmware_v1_4_0.fw
 
 # Display Color Calibration
 vendor/lib/libmm-disp-apis.so
@@ -95,10 +95,10 @@ vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
 # Graphics firmware
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
 
 # Qualcomm framework
 bin/irsc_util
@@ -161,8 +161,8 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 
 # Sensorhub Firmware
-etc/firmware/sensorhubfw.bin|90ec2a32050faf764529c22639e7a2a0196e28fc
-etc/firmware/sensorhubver.txt|7719a1c782a1ba91c031a682a0a2f8658209adbf
+vendor/firmware/sensorhubfw.bin|90ec2a32050faf764529c22639e7a2a0196e28fc
+vendor/firmware/sensorhubver.txt|7719a1c782a1ba91c031a682a0a2f8658209adbf
 
 # Thermal
 vendor/bin/thermal-engine
@@ -176,10 +176,10 @@ vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 
 # Venus (media) firmware
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+vendor/firmware/venus.b00
+vendor/firmware/venus.b01
+vendor/firmware/venus.b02
+vendor/firmware/venus.b03
+vendor/firmware/venus.b04
+vendor/firmware/venus.mbn
+vendor/firmware/venus.mdt
