@@ -32,10 +32,6 @@ vendor/lib/libfastcvopt.so
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_4_0.fw
 
-# Display Color Calibration
-vendor/lib/libmm-disp-apis.so
-vendor/lib/libmm-qdcm.so
-
 # DRM
 bin/qseecomd
 vendor/lib/mediadrm/libwvdrmengine.so
