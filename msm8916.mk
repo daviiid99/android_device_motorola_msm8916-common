@@ -142,10 +142,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -270,7 +266,6 @@ PRODUCT_PACKAGES += \
     init.mmi.touch.sh \
     init.mmi.usb.rc \
     init.qcom.mem.sh \
-    init.qcom.ril.sh \
     init.qcom.rc \
     stml0xx_wrapper.sh \
     ueventd.qcom.rc
@@ -298,9 +293,6 @@ $(call inherit-product, device/motorola/msm8916-common/system_prop.mk)
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
-
-#PRODUCT_PACKAGES += \
-#    android.hardware.thermal@1.0-impl
 
 # Power
 PRODUCT_PACKAGES += \
