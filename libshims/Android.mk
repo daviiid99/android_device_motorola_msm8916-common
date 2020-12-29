@@ -19,6 +19,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := MediaCodec.cpp AudioSource.cpp MetaData.cpp
 LOCAL_SHARED_LIBRARIES := libstagefright libmedia
+LOCAL_CFLAGS := -Wno-unused-parameter
 LOCAL_MODULE := libshims_camera
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
