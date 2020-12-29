@@ -2,6 +2,7 @@
 
 #include <sys/socket.h>
 #include <linux/wireless.h>
+#include <string.h>
 
 #include "cutils/log.h"
 
@@ -59,11 +60,11 @@ s32 wifi_qsap_set_tx_power(s32 tx_power)
     wrq.u.data.pointer = &tx_power;
     wrq.u.data.flags = 0;
 
-    ret = ioctl(sock, QCSAP_IOCTL_SET_MAX_TX_POWER, &wrq);
+    long result = ioctl(sock, QCSAP_IOCTL_SET_MAX_TX_POWER, &wrq);
     close(sock);
 
-    if (ret) {
-        ALOGE("%s :IOCTL set tx power failed: %ld\n", __func__, ret);
+    if (result) {
+        ALOGE("%s :IOCTL set tx power failed: %ld\n", __func__, result);
         ret = eERR_SET_TX_POWER;
     } else {
         ALOGD("%s :IOCTL set tx power issued\n", __func__);
