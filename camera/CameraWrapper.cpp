@@ -111,7 +111,7 @@ static int check_vendor_module()
     return rv;
 }
 
-static char *camera_fixup_getparams(int id, const char *settings)
+static char *camera_fixup_getparams(int __attribute__((unused)) id, const char *settings)
 {
     CameraParameters params;
     params.unflatten(String8(settings));
@@ -177,22 +177,23 @@ static int camera_set_preview_window(struct camera_device *device,
     return VENDOR_CALL(device, set_preview_window, window);
 }
 
-void camera_notify_cb(int32_t msg_type, int32_t ext1, int32_t ext2, void *user) {
+void camera_notify_cb(int32_t msg_type, int32_t ext1, int32_t ext2,
+        void * __attribute__((unused)) user) {
     gUserNotifyCb(msg_type, ext1, ext2, gUserCameraDevice);
 }
 
 void camera_data_cb(int32_t msg_type, const camera_memory_t *data, unsigned int index,
-        camera_frame_metadata_t *metadata, void *user) {
+        camera_frame_metadata_t *metadata, void * __attribute__((unused)) user) {
     gUserDataCb(msg_type, data, index, metadata, gUserCameraDevice);
 }
 
 void camera_data_cb_timestamp(nsecs_t timestamp, int32_t msg_type,
-        const camera_memory_t *data, unsigned index, void *user) {
+        const camera_memory_t *data, unsigned index, void * __attribute__((unused)) user) {
     gUserDataCbTimestamp(timestamp, msg_type, data, index, gUserCameraDevice);
 }
 
 camera_memory_t* camera_get_memory(int fd, size_t buf_size,
-        uint_t num_bufs, void *user) {
+        uint_t num_bufs, void * __attribute__((unused)) user) {
     return gUserGetMemory(fd, buf_size, num_bufs, gUserCameraDevice);
 }
 
@@ -425,6 +426,9 @@ static void camera_put_parameters(struct camera_device *device, char *params)
 {
     if (params)
         free(params);
+
+    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+            (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
 }
 
 static int camera_send_command(struct camera_device *device,
