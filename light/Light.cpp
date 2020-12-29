@@ -21,35 +21,22 @@
 #include <android-base/logging.h>
 
 namespace {
-using android::hardware::light::V2_0::LightState;
+    using android::hardware::light::V2_0::LightState;
 
-static constexpr int RAMP_SIZE = 8;
-static constexpr int RAMP_STEP_DURATION = 50;
+    // LED can be intrusive, so add flag to disable it.
+    static constexpr bool LED_ENABLED = false;
 
-static constexpr int BRIGHTNESS_RAMP[RAMP_SIZE] = {0, 12, 25, 37, 50, 72, 85, 100};
-static constexpr int DEFAULT_MAX_BRIGHTNESS = 255;
+    static constexpr int DEFAULT_MAX_BRIGHTNESS = 255;
 
-static uint32_t rgbToBrightness(const LightState& state) {
-    uint32_t color = state.color & 0x00ffffff;
-    return ((77 * ((color >> 16) & 0xff)) + (150 * ((color >> 8) & 0xff)) +
-            (29 * (color & 0xff))) >> 8;
-}
-
-static bool isLit(const LightState& state) {
-    return (state.color & 0x00ffffff);
-}
-
-static std::string getScaledDutyPcts(int brightness) {
-    std::string buf, pad;
-
-    for (auto i : BRIGHTNESS_RAMP) {
-        buf += pad;
-        buf += std::to_string(i * brightness / 255);
-        pad = ",";
+    static uint32_t rgbToBrightness(const LightState& state) {
+        uint32_t color = state.color & 0x00ffffff;
+        return ((77 * ((color >> 16) & 0xff)) + (150 * ((color >> 8) & 0xff)) +
+                (29 * (color & 0xff))) >> 8;
     }
 
-    return buf;
-}
+    static bool isLit(const LightState& state) {
+        return (state.color & 0x00ffffff);
+    }
 }  // anonymous namespace
 
 namespace android {
@@ -120,12 +107,12 @@ void Light::setSpeakerBatteryLightLocked() {
 }
 
 void Light::setSpeakerLightLocked(const LightState& state) {
-//    if (isLit(state)) {
-//        mChargingLed << DEFAULT_MAX_BRIGHTNESS << std::endl;
-//    } else {
+    if (LED_ENABLED && isLit(state)) {
+        mChargingLed << DEFAULT_MAX_BRIGHTNESS << std::endl;
+    } else {
         // Lights off
         mChargingLed << 0 << std::endl;
-//    }
+    }
 }
 
 }  // namespace implementation
