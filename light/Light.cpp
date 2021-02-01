@@ -24,7 +24,7 @@ namespace {
     using android::hardware::light::V2_0::LightState;
 
     // Add a flag to force disable the LED by setting the following bool to false.
-    static constexpr bool LED_ENABLED = true;
+    static constexpr bool LED_ENABLED = false;
 
     static constexpr int DEFAULT_MAX_BRIGHTNESS = 255;
 
