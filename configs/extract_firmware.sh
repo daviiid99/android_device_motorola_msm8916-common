@@ -1,7 +1,5 @@
 #!/sbin/sh
 
-setenforce 0
-
 export SYSDEV="$(readlink -nf "/dev/block/bootdevice/by-name/system")"
 export FWDEV="$(readlink -nf "/dev/block/bootdevice/by-name/modem")"
 
@@ -48,5 +46,3 @@ for file in /firmware/image/*.gz; do
 done
 unmount_system
 unmount_firmware
-
-setenforce 1
