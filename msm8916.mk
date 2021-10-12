@@ -148,7 +148,7 @@ PRODUCT_PACKAGES += \
     libtinyxml
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=1
 
 # Ebtables
 PRODUCT_PACKAGES += \
