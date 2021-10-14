@@ -42,6 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.cpurend.vsync=false \
     persist.hwc.mdpcomp.enable=1 \
+    debug.renderengine.backend=threaded \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
 # FRP
