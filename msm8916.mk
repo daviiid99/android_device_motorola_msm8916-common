@@ -114,7 +114,6 @@ PRODUCT_PACKAGES += \
     libc_util \
     libboringssl-compat \
     libshims_camera \
-    libshims_sensor \
     Camera2
 
 PRODUCT_COPY_FILES += \
