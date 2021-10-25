@@ -16,10 +16,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.gapless.enabled=true \
     vendor.voice.path.for.pcm.voip=true
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=pronto \
@@ -73,8 +69,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0 \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0 \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=1 \
     vendor.mediacodec.binder.size=6 \
     vidc.enc.narrow.searchrange=1
 
